@@ -1,20 +1,25 @@
 class Item:
-    def calculate_total_price(self, x, y):
-        return x * y
+    # Any methods starting and ending with double underscore is called Magic/Dunder methods
+    def __init__(self, name, price , quantity=0) -> None: # __init__ returns None type
+        self.name = name # Assigning dynamic attribute
+        self.price = price # Assigning dynamic attribute
+        self.quantity = quantity # Assigning dynamic attribute
+    def calculate_total_price(self):
+        return f'Total price for {self.name} is: {self.price * self.quantity}' 
 
+# Instance of the Item class
+item1 = Item("Phone", 100, 3)
+# Another Instance of the Item class
+item2 = Item("Laptop", 5000, 5)
 
-item1 = Item()
-item1.name = "Phone"
-item1.price = 100
-item1.quantity = 5
-print(item1.calculate_total_price(item1.price, item1.quantity))
-print(type(item1))
+print(item1.name)
+print(item1.price)
+print(item1.quantity)
 
+print(item2.name)
+print(item2.price)
+print(item2.quantity)
 
-item2 = Item()
-item2.name = "Laptop"
-item2.price = 1000
-item2.quantity = 3
-print(item2.calculate_total_price(item2.price, item2.quantity))
-
+print(item1.calculate_total_price())
+print(item2.calculate_total_price())
 
