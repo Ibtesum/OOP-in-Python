@@ -3,5 +3,8 @@ I have created several branches with related topic name. You can find all the co
 
 If you want to study, you can follow the following serial:
 1. main
-2. 
+2. Constructor
+3. Check-Validation-in-Constructor
+4. Class Attribute
+5. __repr__
 
